@@ -1,0 +1,33 @@
+.tennis-container {
+  background: var(--dark-gradient);
+  color: white;
+  text-transform: capitalize;
+
+  .text-side-left {
+    padding-left: 86px;
+    font-size: 20px;
+    text-align: center;
+
+    h1 {
+      font-size: 50px;
+      font-weight: bold;
+      color: #600018;
+      text-transform: capitalize;
+      background: linear-gradient(91deg, #DD6080, #F7A55C);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-stroke: 8px transparent;
+    }
+    p {
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+  }
+  
+  .image-side-right img {
+    max-width: 95%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

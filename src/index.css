@@ -1,13 +1,112 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+
+:root {
+  --poppins-font: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;;
+  --zoo-font: "Zen Tokyo Zoo", system-ui;
+
+  --primary: #F7A55C;
+  --secondary: #DD6080;
+
+  --dark-gradient: linear-gradient(to bottom, rgba(128, 0, 32, 0.6), rgba(26, 0, 7, 0.6)),#000000;
 }
 
+body {
+    margin: 0;
+    font-family: var(--poppins-font);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+input {box-shadow: none !important;}
+
+input[type="checkbox"]{
+  border: 1.5px solid #445463 !important; 
+  border-radius: 4.5px !important;
+}
+
+input[type="checkbox"]:checked {
+  box-shadow: none !important;
+
+  &:focus {
+    border: 1.5px solid #445463 !important;
+  }
+  &:checked {
+    background-color: var(--secondary) !important;
+    border: 1.5px solid white !important;
+  }
+}
+
+input[type=radio]{
+  border: 1.5px solid #445463 !important;
+}
+
+input[type="radio"]:checked {
+  box-shadow: none !important;
+  /* accent-color: #7A0ECF !important; */
+
+  &:focus {border-color: #7A0ECF !important;}
+  &:checked {
+    background-color: transparent !important; 
+    border: 2px solid #7A0ECF !important;
+  }
+}
+
+textarea {
+  box-shadow: none !important;
+  &:focus {border-color: var(--secondary) !important; outline-color: var(--secondary); outline-width: 1px;}
+}
+
+@media screen and (max-width: 991px) {
+  .grid-row {
+    grid-template-columns: auto; 
+    grid-gap: 20px;
+  }
+}
+
+.text-10 {font-size: 10px;}
+.text-12 {font-size: 12px;}
+.text-13 {font-size: 13px;}
+.text-14 {font-size: 14px;}
+.text-15 {font-size: 15px;}
+.text-16 {font-size: 16px;}
+.text-20 {font-size: 20px; font-weight: bold;}
+
+.control-label {
+  font-size: 12px; 
+  font-weight: 800;
+  letter-spacing: 2%;
+  color: #445463; 
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+.control-label-white {
+  font-size: 12px; 
+  font-weight: 800;
+  letter-spacing: 2%;
+  color: #FFF; 
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+.form-control-custom {
+  height:48px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.5px;
+  background-color: #FFF;
+  color: #98A8B7;
+  filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.05));
+  border-color: #E5E9ED99;
+  border-radius: 14px !important;
+  box-shadow: none !important;
+  &::placeholder {
+    color: #98A8B7
+  }
 }

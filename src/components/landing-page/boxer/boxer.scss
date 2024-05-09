@@ -1,0 +1,25 @@
+.boxer-container {
+  position: relative;
+  margin-top: 4px;
+  background: var(--dark-gradient);
+  min-height: 750px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.text-side {
+  width: 70%;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  padding: 9%;
+  text-align: start;
+  font-size: 20px;
+}
+.image-side img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  object-fit: cover;
+}

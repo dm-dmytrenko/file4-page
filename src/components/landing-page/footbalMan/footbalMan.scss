@@ -1,0 +1,39 @@
+.footbal-container {
+  background: linear-gradient(to bottom, #D9D9D9, #737373);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 110px 60px 110px;
+  max-height: 800px;
+  color: #1B1B1B;
+
+  .text-side-right-football {
+    h1 {
+      font-size: 60px;
+      font-weight: 800;
+      color: transparent;
+      -webkit-text-stroke: 4px black;
+      -webkit-background-clip: text;
+      background-clip: text;
+      padding-bottom: 29px;
+    }
+    p {
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: 2px !important;
+      margin-bottom: 0px;
+      text-transform: capitalize;
+    }
+  }
+
+  .image-side-left {
+    padding-right: 20px;
+    
+    img {
+      min-width: 250px;
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
