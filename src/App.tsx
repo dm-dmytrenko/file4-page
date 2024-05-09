@@ -10,7 +10,7 @@ import ScrollToTop from "./features/scrollToTop/scrollToTop";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/file4-page">
       <ScrollToTop>
         <Routes>
           <Route path='/' element={<SalesPage />} />
