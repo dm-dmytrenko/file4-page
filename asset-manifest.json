@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/file4-page/static/css/main.639dc552.css",
-    "main.js": "/file4-page/static/js/main.d94a214e.js",
-    "static/media/background-botom.svg": "/file4-page/static/media/background-botom.162b358c0683d836ea22.svg",
-    "static/media/team.png": "/file4-page/static/media/team.26248cb127408d3ba1d7.png",
-    "static/media/boxer.png": "/file4-page/static/media/boxer.b3e65f731cdc30b142c0.png",
-    "static/media/tennisWoman.png": "/file4-page/static/media/tennisWoman.5713b58a815b4ac7d8dd.png",
-    "static/media/footBallMan.png": "/file4-page/static/media/footBallMan.2a4e34934c4eaf19d3fb.png",
-    "static/media/body-set-left.png": "/file4-page/static/media/body-set-left.806d5274e507c856b997.png",
-    "static/media/body-set-right.png": "/file4-page/static/media/body-set-right.4fb79c984cc6ce3dc72a.png",
-    "static/media/feces.png": "/file4-page/static/media/feces.a56d9ffa1b68570bde05.png",
-    "static/media/road.svg": "/file4-page/static/media/road.e44d29d23f06c4070923.svg",
-    "index.html": "/file4-page/index.html",
-    "main.639dc552.css.map": "/file4-page/static/css/main.639dc552.css.map",
-    "main.d94a214e.js.map": "/file4-page/static/js/main.d94a214e.js.map"
+    "main.css": "/static/css/main.9c41dfd3.css",
+    "main.js": "/static/js/main.36d4f51b.js",
+    "static/media/background-botom.svg": "/static/media/background-botom.162b358c0683d836ea22.svg",
+    "static/media/team.png": "/static/media/team.26248cb127408d3ba1d7.png",
+    "static/media/boxer.png": "/static/media/boxer.b3e65f731cdc30b142c0.png",
+    "static/media/tennisWoman.png": "/static/media/tennisWoman.5713b58a815b4ac7d8dd.png",
+    "static/media/footBallMan.png": "/static/media/footBallMan.2a4e34934c4eaf19d3fb.png",
+    "static/media/body-set-left.png": "/static/media/body-set-left.806d5274e507c856b997.png",
+    "static/media/body-set-right.png": "/static/media/body-set-right.4fb79c984cc6ce3dc72a.png",
+    "static/media/feces.png": "/static/media/feces.a56d9ffa1b68570bde05.png",
+    "static/media/road.svg": "/static/media/road.e44d29d23f06c4070923.svg",
+    "index.html": "/index.html",
+    "main.9c41dfd3.css.map": "/static/css/main.9c41dfd3.css.map",
+    "main.36d4f51b.js.map": "/static/js/main.36d4f51b.js.map"
   },
   "entrypoints": [
-    "static/css/main.639dc552.css",
-    "static/js/main.d94a214e.js"
+    "static/css/main.9c41dfd3.css",
+    "static/js/main.36d4f51b.js"
   ]
 }
