@@ -13,7 +13,7 @@ function App() {
     <Router basename="/file4-page">
       <ScrollToTop>
         <Routes>
-          <Route path='/' element={<SalesPage />} />
+          <Route path='' element={<SalesPage />} />
           <Route path='/contact' element={<ContactForm />} />
         </Routes>
       </ScrollToTop>
