@@ -1,9 +1,4 @@
 .before-start-container {
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // justify-content: space-around;
-
     .before-start-wrapper {
         color: white;
     
@@ -31,12 +26,12 @@
 }
 
 @media (max-width: 992px) {
-  img {
+  .before-start-wrapper img {
     width: 80%;
   }
 }
 @media (max-width: 768px) {
-  img {
+  .before-start-wrapper img {
     margin-top: 20px;
     width: 70%;
   }
