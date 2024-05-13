@@ -20,7 +20,7 @@ const JoinTeam: React.FC = () => {
               <h2>Healthy, dedicated athletes!</h2>
               <h3>Turn your passion into opportunity!</h3>
               <Link to='/contact'>
-              <button  className='custom-btn'>Apply Now!</button>
+                <button  className='custom-btn'>Apply Now!</button>
               </Link>
             </Col>
           </Row>
