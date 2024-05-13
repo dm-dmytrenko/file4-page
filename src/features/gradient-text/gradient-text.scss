@@ -1,4 +1,4 @@
-.gradient-text {
+.gradient-text-comp {
     font-size: 40px;
     font-weight: 800;
     font-style: normal;
@@ -7,4 +7,10 @@
     -webkit-background-clip: text;
     background-clip: text; 
     color: transparent;
+}
+
+@media (max-width: 450px) {
+    .gradient-text-comp {
+        font-size: 30px !important;
+    }
 }

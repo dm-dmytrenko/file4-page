@@ -41,10 +41,10 @@ const Questionnaire: React.FC = () => {
   return (
     <Container className='question-container'>
         <Row 
-            className="justify-content-md-center"
+            className="justify-content-center"
             style={{margin:'37px 0 37px 0'}}
         >
-            <Col md="auto">
+            <Col xs={12} className="text-center">
                 <GradientTextComponent text="Questionnaire"/>
             </Col>
         </Row>
@@ -92,7 +92,7 @@ const Questionnaire: React.FC = () => {
                     <Row>
                         <Form.Label className="control-label-white mb-3">gender</Form.Label>
                         <div 
-                            className="d-flex gap-4"
+                            className="d-flex gap-4 flex-wrap flex-wrap-sm"
                             style={{paddingLeft: '9%'}}
                         >
                             <Form.Check className="text-14" type="checkbox" label="Male" />

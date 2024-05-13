@@ -14,8 +14,8 @@ const ContactForm: React.FC = () => {
       <HeaderForm />
       <BeforeStart />
       <PersonalDetails />
-      {/* <Questionnaire />
-      <GradientBox height='39px'/> */}
+      <Questionnaire />
+      <GradientBox height='39px'/>
     </div>
   );
 };

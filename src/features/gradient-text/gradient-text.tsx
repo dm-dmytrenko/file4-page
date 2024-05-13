@@ -6,7 +6,7 @@ interface GradientTextProps {
 }
 
 const GradientTextComponent: React.FC<GradientTextProps> = ({ text }) => (
-    <h2 className="gradient-text">{text}</h2>
+    <h2 className="gradient-text-comp">{text}</h2>
 );
 
 export default GradientTextComponent;
