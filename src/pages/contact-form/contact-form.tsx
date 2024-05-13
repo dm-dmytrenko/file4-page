@@ -13,8 +13,8 @@ const ContactForm: React.FC = () => {
     <div className='contact-form'>
       <HeaderForm />
       <BeforeStart />
-      {/* <PersonalDetails />
-      <Questionnaire />
+      <PersonalDetails />
+      {/* <Questionnaire />
       <GradientBox height='39px'/> */}
     </div>
   );

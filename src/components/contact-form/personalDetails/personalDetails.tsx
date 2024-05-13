@@ -49,7 +49,7 @@ const PersonalDetails: React.FC = () => {
                         </Col>
                     </Row>
                     <Row>
-                        <Col md={{ span: 3, offset: 2 }}>
+                        <Col xs={{ span: 3, offset: 2 }} md={{ span: 3, offset: 2 }}>
                             <div className="d-grid gap-1">
                                 <Form.Check className="text-14" type="checkbox" label="Facebook/Meta" />
                                 <Form.Check className="text-14" type="checkbox" label="LinkedIn" />
@@ -67,7 +67,7 @@ const PersonalDetails: React.FC = () => {
                                 <Form.Group className="mb-4" controlId="">
                                     <Form.Label className="question-title mb-3">How did you hear about us?   (If you can recall exactly where on Instagram, TikTok, etc., please specify using "other".)</Form.Label>
                                     <Row>
-                                    <Col md={{ span: 3, offset: 2 }}>
+                                    <Col xs={{span: 5, offset: 2}} md={{ span: 3, offset: 2 }}>
                                     <div className="d-grid gap-1">
                                         <Form.Check className="text-14" type="checkbox" label="Word of mouth" />
                                         <Form.Check className="text-14" type="checkbox" label="Facebook" />
@@ -76,7 +76,7 @@ const PersonalDetails: React.FC = () => {
                                         <Form.Check className="text-14" type="checkbox" label="Other:" />
                                     </div>
                                     </Col>
-                                    <Col>
+                                    <Col xs={{span: 5, offset: 2}} md={{ span: 3, offset: 2 }}>
                                     <div className="d-grid gap-1">
                                         <Form.Check className="text-14" type="checkbox" label="The Money Minimalists" />
                                         <Form.Check className="text-14" type="checkbox" label="Instagram" />
@@ -84,7 +84,7 @@ const PersonalDetails: React.FC = () => {
                                         <Form.Check className="text-14" type="checkbox" label="Nextdoor" />
                                     </div>
                                     </Col>
-                                    <Col>
+                                    <Col xs={{span: 5, offset: 2}} md={{ span: 3, offset: 2 }}>
                                     <div className="d-grid gap-1">
                                         <Form.Check className="text-14" type="checkbox" label="YouTube" />
                                         <Form.Check className="text-14" type="checkbox" label="TikTok" />
