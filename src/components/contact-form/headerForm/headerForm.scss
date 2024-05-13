@@ -1,19 +1,12 @@
 .header-container {
-    width: 100%;
     height: 116px;
     background: linear-gradient(91deg, #DD6080 4.08%, #F7A55C 106.84%);
-    border: none;
 
     .gradient-text {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       color: black;
       font-style: normal;
 
       h1 {
-        padding-top: 20px;
         font-size: 40px;
         font-weight: 700;
         }
@@ -25,13 +18,6 @@
     }
   }
   
-  @media (max-width: 600px) {
-    .gradient-box {
-      height: auto;
-      padding: 20px;
-    }
-  
-    .gradient-text {
-      font-size: 24px;
-    }
-  }
+@media (max-width: 460px) {
+  .gradient-text h1 { font-size: 35px !important; }
+}

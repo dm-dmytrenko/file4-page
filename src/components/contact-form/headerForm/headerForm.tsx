@@ -1,15 +1,18 @@
 import React from 'react';
 
+import { Container, Row, Col } from 'react-bootstrap';
 import './headerForm.scss';
 
 const HeaderForm: React.FC = () => {
   return (
-    <div className='header-container'>
-      <header className="gradient-text">
-        <h1>Required Information</h1>
-        <p>(Complete Thoroughly)</p>
-      </header>
-    </div>
+    <Container fluid className='header-container'>
+      <Row className="justify-content-center align-items-center h-100">
+        <Col xs="auto" className="gradient-text text-center">
+          <h1>Required Information</h1>
+          <p>(Complete Thoroughly)</p>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
