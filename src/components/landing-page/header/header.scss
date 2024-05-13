@@ -18,15 +18,26 @@
       -webkit-background-clip: text;
       background-clip: text; 
       color: transparent;
+      text-align: center;
     }
   }
-  
+  @media (max-width: 850px) {
+    .gradient-text-main {
+      font-size: 40px !important;
+    }
+  }
+  @media (max-width: 700px) {
+    .gradient-text-main {
+      font-size: 34px !important;
+    }
+  }
   @media (max-width: 600px) {
-    .gradient-box {
+    .header-main {
       height: auto;
-      padding: 20px;
+      min-height: 100px;
     }
     .gradient-text {
-      font-size: 24px;
+      font-size: 24px !important;
+      padding: 5px 20px;
     }
   }

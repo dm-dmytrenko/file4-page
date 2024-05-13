@@ -11,7 +11,7 @@ import Footer from '../../components/landing-page/footer/footer';
 const SalesPage: React.FC = () => {
   return (
     <div>
-      {/* <Header /> */}
+      <Header />
       <Boxer />
       {/* <FootbalMan />
       <TennisWoman />
