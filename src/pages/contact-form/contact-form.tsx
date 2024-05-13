@@ -12,8 +12,8 @@ const ContactForm: React.FC = () => {
   return (
     <div className='contact-form'>
       <HeaderForm />
-      {/* <BeforeStart />
-      <PersonalDetails />
+      <BeforeStart />
+      {/* <PersonalDetails />
       <Questionnaire />
       <GradientBox height='39px'/> */}
     </div>
