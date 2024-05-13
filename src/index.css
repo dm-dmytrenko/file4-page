@@ -18,6 +18,8 @@ body {
     font-family: var(--poppins-font);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    min-width: 300px;
   }
   
 code {
@@ -64,12 +66,12 @@ textarea {
   &:focus {border-color: var(--secondary) !important; outline-color: var(--secondary); outline-width: 1px;}
 }
 
-@media screen and (max-width: 991px) {
+/* @media screen and (max-width: 991px) {
   .grid-row {
     grid-template-columns: auto; 
     grid-gap: 20px;
   }
-}
+} */
 
 .text-10 {font-size: 10px;}
 .text-12 {font-size: 12px;}

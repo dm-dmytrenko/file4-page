@@ -11,14 +11,14 @@ import Footer from '../../components/landing-page/footer/footer';
 const SalesPage: React.FC = () => {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <Boxer />
-      <FootbalMan />
+      {/* <FootbalMan />
       <TennisWoman />
       <Motivation />
       <JoinTeam />
       <ReqestDetails />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 };

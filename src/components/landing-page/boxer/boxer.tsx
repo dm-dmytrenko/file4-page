@@ -8,7 +8,7 @@ const Boxer: React.FC = () => {
       <div className="boxer-container">
         <div className="text-side">
           <p>
-                Are you dedicated to your sport?  We're not just looking for the elite; we're looking for dedication and a commitment to health!  Whether you're a sprinter, swimmer, or soccer player, we want to hear from YOU!  Our unique program offers a remarkable opportunity to earn an income while staying fit and healthy.  And the best part?  You don't need to be a pro! 
+              Are you dedicated to your sport?  We're not just looking for the elite; we're looking for dedication and a commitment to health!  Whether you're a sprinter, swimmer, or soccer player, we want to hear from YOU!  Our unique program offers a remarkable opportunity to earn an income while staying fit and healthy.  And the best part?  You don't need to be a pro!
           </p>
         </div>
         <div className="image-side">
