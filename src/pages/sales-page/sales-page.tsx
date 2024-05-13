@@ -16,8 +16,8 @@ const SalesPage: React.FC = () => {
       <FootbalMan />
       <TennisWoman />
       <Motivation />
-      {/* <JoinTeam />
-      <ReqestDetails />
+      <JoinTeam />
+      {/* <ReqestDetails />
       <Footer /> */}
     </div>
   );
