@@ -9,7 +9,6 @@
         font-weight: medium;
         width: 40%;
     }
-
     .footer-top {
         height: 350px;
         padding: 100px;
@@ -19,9 +18,9 @@
     .footer-botom {
         min-height: 50px;
         padding-top: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
 
         p {
             width: 100%;
@@ -38,7 +37,11 @@
     }
 }
 @media (max-width: 700px) {
-.footer-container p {
-    width: 100%;
+    .footer-container p {
+        width: 100%;
+    }
 }
+@media (max-width: 550px) {
+    .footer-top { padding: 80px 40px 80px 40px !important; }
+    .footer-botom p { font-size: 11px; }
 }
