@@ -53,3 +53,8 @@
     display: none;
   }
 }
+@media (max-width: 400px) {
+  .text-side {
+    font-size: 16px !important;
+  }
+}
