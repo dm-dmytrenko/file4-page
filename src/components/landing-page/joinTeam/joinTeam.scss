@@ -1,6 +1,6 @@
 .team-container {
     background: linear-gradient(to bottom, rgba(128, 0, 32, 0.5), rgba(26, 0, 7, 0.5)),#000000;
-    height: 750px;
+    min-height: 750px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,7 +56,6 @@
   }
 }
 @media (max-width: 767px) {
-  .text-side-right {
-    padding-top: 30px;
-  }
+  .text-side-right { padding-top: 30px; }
+  .image-side-left img { max-width: 50%;}
 }
