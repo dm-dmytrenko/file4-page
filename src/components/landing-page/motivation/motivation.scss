@@ -31,7 +31,28 @@
   }
 
 @media (max-width: 1445px) {
-.motivation-container {
-    background-size: auto;
+    .motivation-container {
+        background-size: auto;
+    }
 }
+@media (max-width: 850px) {
+    .motivation-container {
+        padding: 160px 100px 160px 100px;
+        h1 {
+            font-size: 45px;
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+}
+@media (max-width: 500px) {
+    .motivation-container {
+        padding: 130px 80px 130px 80px;
+    }
+}
+@media (max-width: 430px) {
+    .motivation-container {
+        padding: 100px 30px 100px 30px;
+    }
 }
