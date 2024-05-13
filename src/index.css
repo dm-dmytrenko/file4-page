@@ -112,3 +112,20 @@ textarea {
     color: #98A8B7
   }
 }
+
+.custom-btn {
+  width: 200px;
+  height: 50px;
+  background: linear-gradient(to right, #DD6080, #F49D60);
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #FFFFFF;
+  border: 1px solid black;
+
+  &:hover {
+    background: linear-gradient(to right, #F49D60, #DD6080);
+  }
+}
