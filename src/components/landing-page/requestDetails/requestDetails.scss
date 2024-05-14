@@ -1,8 +1,8 @@
 .details-container {
-    background: url('../../../static/images/background-botom.svg');
+    background: url('../../../static/images/background-botom-2.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover; 
+    background-size: cover;
     height: 750px;      
     padding: 10%;
     display: flex;
@@ -12,6 +12,7 @@
     text-align: center;
     color: white;
     font-weight: 600;
+    border: none;
 
     h1 {
         padding-bottom: 16px;
