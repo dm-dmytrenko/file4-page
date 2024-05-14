@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/file4-page/static/css/main.8d314791.css",
+    "main.css": "/file4-page/static/css/main.80407362.css",
     "main.js": "/file4-page/static/js/main.df9c4572.js",
-    "static/media/background-botom-2.jpg": "/file4-page/static/media/background-botom-2.5a950f07c0e0ec2f0c3a.jpg",
+    "static/media/background-botom-2-min.jpg": "/file4-page/static/media/background-botom-2-min.a9fef75fe4b5622790b3.jpg",
     "static/media/team.png": "/file4-page/static/media/team.26248cb127408d3ba1d7.png",
     "static/media/boxer.png": "/file4-page/static/media/boxer.b3e65f731cdc30b142c0.png",
     "static/media/tennisWoman.png": "/file4-page/static/media/tennisWoman.5713b58a815b4ac7d8dd.png",
@@ -12,11 +12,11 @@
     "static/media/feces.png": "/file4-page/static/media/feces.a56d9ffa1b68570bde05.png",
     "static/media/road.svg": "/file4-page/static/media/road.e44d29d23f06c4070923.svg",
     "index.html": "/file4-page/index.html",
-    "main.8d314791.css.map": "/file4-page/static/css/main.8d314791.css.map",
+    "main.80407362.css.map": "/file4-page/static/css/main.80407362.css.map",
     "main.df9c4572.js.map": "/file4-page/static/js/main.df9c4572.js.map"
   },
   "entrypoints": [
-    "static/css/main.8d314791.css",
+    "static/css/main.80407362.css",
     "static/js/main.df9c4572.js"
   ]
 }
