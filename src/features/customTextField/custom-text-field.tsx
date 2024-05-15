@@ -4,12 +4,14 @@ import { Col, Form } from 'react-bootstrap';
 interface CustomFormFieldProps {
     label: string;
     placeholder: string;
+    name?: string,
     md?: number;
     xs?: number;
     className?: string;
   }
 
 const CustomFormField: React.FC<CustomFormFieldProps> = ({ 
+  name,
   label, 
   placeholder, 
   md = 6, 
@@ -22,6 +24,7 @@ const CustomFormField: React.FC<CustomFormFieldProps> = ({
       <Form.Control
         className="form-control-custom"
         type="text"
+        name={name}
         placeholder={placeholder}
       />
     </Form.Group>
