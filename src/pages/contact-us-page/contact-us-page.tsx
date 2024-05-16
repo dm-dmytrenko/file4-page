@@ -49,15 +49,15 @@ const ContactUsPage: React.FC = () => {
                         name='name'
                         className='control-label-white'
                         xs={10} md={8}
-                        onChange={handleInputChange}
+                        onInputChange={handleInputChange}
                     />
                     <CustomFormField 
                         label="Company Name" 
                         placeholder='Enter your company namr' 
-                        name='company-name'
+                        name='company-namr'
                         className='control-label-white'
                         xs={10} md={8}
-                        onChange={handleInputChange}
+                        onInputChange={handleInputChange}
                     />
                     <CustomFormField 
                         label="Position" 
@@ -65,7 +65,7 @@ const ContactUsPage: React.FC = () => {
                         name='position'
                         className='control-label-white'
                         xs={10} md={8}
-                        onChange={handleInputChange}
+                        onInputChange={handleInputChange}
                     />
                     <CustomFormField 
                         label="Phone" 
@@ -73,7 +73,7 @@ const ContactUsPage: React.FC = () => {
                         name='phone'
                         className='control-label-white'
                         xs={10} md={8}
-                        onChange={handleInputChange}
+                        onInputChange={handleInputChange}
                     />
                     <CustomFormField 
                         label="Email" 
@@ -81,7 +81,7 @@ const ContactUsPage: React.FC = () => {
                         name='email'
                         className='control-label-white'
                         xs={10} md={8}
-                        onChange={handleInputChange}
+                        onInputChange={handleInputChange}
                     />
                     <CustomFormField 
                         label="Best time to reach you" 
@@ -89,7 +89,7 @@ const ContactUsPage: React.FC = () => {
                         name='best-time'
                         className='control-label-white'
                         xs={10} md={8}
-                        onChange={handleInputChange}
+                        onInputChange={handleInputChange}
                     />
                     <Col xs={10} md={8} className="d-grid gap-1 contact-us-checkbox">
                         <Form.Check 
@@ -137,7 +137,7 @@ const ContactUsPage: React.FC = () => {
                     style={{paddingBottom: '25px'}}
                 >
                     <Col xs={10} sm={6} md={4} lg={3} xl={2}>
-                        <Link to='/'>
+                        {/* <Link to='/'> */}
                             <Button 
                                 className='custom-btn' 
                                 style={{border:'none', width:'100%'}}
@@ -145,7 +145,7 @@ const ContactUsPage: React.FC = () => {
                             >
                                 SUBMIT
                             </Button>
-                        </Link>
+                        {/* </Link> */}
                     </Col>
                 </Row>
                 <Row>

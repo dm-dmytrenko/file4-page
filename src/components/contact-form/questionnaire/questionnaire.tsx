@@ -6,6 +6,8 @@ import QuestionCheckbox from '../../../features/questionCheckbox/question-checkb
 import fecesImage from '../../../static/images/feces.png';
 import scrollThumb from '../../../static/images/scroll-thumb.png';
 
+import PersonalDetails from '../personalDetails/personalDetails';
+
 import './questionnaire.scss';
 
 const Questionnaire: React.FC = () => {
@@ -13,6 +15,7 @@ const Questionnaire: React.FC = () => {
     const [scrollPercentage, setScrollPercentage] = useState(0);
 
     const [checkboxValues, setCheckboxValues] = useState<Record<string, string[]>>({});
+    const [inputData, setInputData] = useState<Record<string, string>>({});
 
     const handleCheckboxChange = (groupName: string, values: string[]) => {
         setCheckboxValues((prevValues) => ({
@@ -21,10 +24,24 @@ const Questionnaire: React.FC = () => {
         }));
     };
 
+    // const handleInputChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    //     const { name, value } = event.target;
+    //     setInputData((prevData: any) => ({
+    //     ...prevData,
+    //     [name]: value,
+    //     }));
+    // };
+
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         
         const formData: { [key: string]: string } = JSON.parse(JSON.stringify(checkboxValues));
+
+        for (const key in inputData) {
+            if (Object.prototype.hasOwnProperty.call(inputData, key)) {
+                formData[key] = inputData[key];
+            }
+        }
     
         const inputs = event.currentTarget.getElementsByTagName('input');
         for (let i = 0; i < inputs.length; i++) {
@@ -69,30 +86,45 @@ const Questionnaire: React.FC = () => {
     }, []);
 
   return (
-    <Container className='question-container'>
-        <Row 
-            className="justify-content-center"
-            style={{margin:'37px 0 37px 0'}}
-        >
-            <Col xs={12} className="text-center">
-                <GradientTextComponent text="Questionnaire"/>
-            </Col>
-        </Row>
-        <Row>
-            <p>
-                <b>IMPORTANT!</b> This questionnaire's purpose is to gauge both your potential efficacy and safety as a stool donor. It is not in your best interest to be untruthful on this questionnaire. At best you would be an ineffective donor and would not be used after a few donations, or worse, you could seriously harm someone, which may result in legal action if it is determined that you lied.
-            </p>
-            <div className="d-grid gap-1" style={{marginLeft:'5px'}}>
-                <Form.Check className="text-20" type="checkbox" label="I understand." />
-            </div>
-            <p style={{paddingTop: '40px'}}>
-                I certify that the foregoing is true, correct, and complete. And if I am selected I could be asked for medical reports to confirm my statements. I understand that the accuracy, truthfulness, and completeness of my answers is important for patient safety.
-            </p>
-            <div className="d-grid gap-1" style={{marginLeft:'5px'}}>
-                <Form.Check className="text-20" type="checkbox" label="I do." />
-            </div>
-        </Row>
-        <Form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
+        <PersonalDetails onChange={handleCheckboxChange} />
+        <Container className='question-container'>
+            <Row 
+                className="justify-content-center"
+                style={{margin:'37px 0 37px 0'}}
+            >
+                <Col xs={12} className="text-center">
+                    <GradientTextComponent text="Questionnaire"/>
+                </Col>
+            </Row>
+
+            <Row>
+                <p>
+                    <b>IMPORTANT!</b> This questionnaire's purpose is to gauge both your potential efficacy and safety as a stool donor. It is not in your best interest to be untruthful on this questionnaire. At best you would be an ineffective donor and would not be used after a few donations, or worse, you could seriously harm someone, which may result in legal action if it is determined that you lied.
+                </p>
+                <div className="d-grid gap-1" style={{marginLeft:'5px'}}>
+                    <Form.Check 
+                        className="text-20" 
+                        type="checkbox" 
+                        label="I understand."
+                        name='importantFirst'
+                        onChange={(values) => handleCheckboxChange('importantFirst', [values.target.value])}
+                    />
+                </div>
+                <p style={{paddingTop: '40px'}}>
+                    I certify that the foregoing is true, correct, and complete. And if I am selected I could be asked for medical reports to confirm my statements. I understand that the accuracy, truthfulness, and completeness of my answers is important for patient safety.
+                </p>
+                <div className="d-grid gap-1" style={{marginLeft:'5px'}}>
+                    <Form.Check 
+                        className="text-20" 
+                        type="checkbox" 
+                        label="I do." 
+                        name='importantSecond'
+                        onChange={(values) => handleCheckboxChange('importantSecond', [values.target.value])}
+                    />
+                </div>
+            </Row>
+
             <Form.Group>
                 <Row style={{marginTop:'56px'}}>
                     <Col md={2} style={{ position: 'relative' }} className="d-flex flex-column justify-content-center align-items-center">
@@ -113,12 +145,36 @@ const Questionnaire: React.FC = () => {
                     <Col md={8}>
                     <div>
                         <Row>
-                            <CustomFormField label="dob" name="dob" placeholder='Enter your DOB' xs={6} md={6} className='control-label-white'/>
-                            <CustomFormField label="age" name="age" placeholder='Enter your Age' xs={6} md={6} className='control-label-white'/>
+                            <CustomFormField 
+                                label="dob" 
+                                name="dob" 
+                                placeholder='Enter your DOB' 
+                                xs={6} md={6} 
+                                className='control-label-white'
+                            />
+                            <CustomFormField 
+                                label="age" 
+                                name="age" 
+                                placeholder='Enter your Age' 
+                                xs={6} md={6} 
+                                className='control-label-white'
+                            />
                         </Row>
                         <Row>
-                            <CustomFormField label="height" name="height" placeholder='Enter your height' xs={6} md={6} className='control-label-white'/>
-                            <CustomFormField label="weight" name="weight" placeholder='Enter your weight' xs={6} md={6} className='control-label-white'/>
+                            <CustomFormField 
+                                label="height" 
+                                name="height" 
+                                placeholder='Enter your height' 
+                                xs={6} md={6} 
+                                className='control-label-white'
+                            />
+                            <CustomFormField 
+                                label="weight" 
+                                name="weight" 
+                                placeholder='Enter your weight' 
+                                xs={6} md={6} 
+                                className='control-label-white'
+                            />
                         </Row>
                         <Row>
                             <QuestionCheckbox 
@@ -199,7 +255,7 @@ const Questionnaire: React.FC = () => {
                                 </div>
                             </Col>
                         </Row>
-                         <Row>
+                            <Row>
                             <QuestionCheckbox 
                                 listText="If yes, how long:"
                                 checkboxLabels={['Less than 6 months', 'At least 6 months', 'At least 1 year', 'At least 2 years', 'Not sure']}
@@ -734,8 +790,8 @@ const Questionnaire: React.FC = () => {
                     </Col>
                 </Row>
             </Form.Group>
-        </Form>
-    </Container>
+        </Container>
+    </Form>
     );
   };
   

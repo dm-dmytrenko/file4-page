@@ -11,7 +11,9 @@ interface QuestionCheckboxProps {
   }
 
   const QuestionCheckbox: React.FC<QuestionCheckboxProps> = ({ listText, checkboxLabels = [], onChange, className="d-grid gap-1" }) => {
+    
     const [selectedValues, setSelectedValues] = useState<string[]>([]);
+
     const handleCheckboxChange = (value: string) => {
       const updatedValues = [...selectedValues];
       if (updatedValues.includes(value)) {
@@ -22,27 +24,29 @@ interface QuestionCheckboxProps {
       setSelectedValues(updatedValues);
       onChange(updatedValues);
     };
-    return (
-  <div className="question-checkox-container">
-    <ul>
-      <li>{listText}</li>
-    </ul>
 
-    <Col md={{ offset: 1 }}>
-      <div className={className}>
-        {checkboxLabels.map((label, index) => (
-          <Form.Check
-            key={index}
-            className="text-14"
-            type="checkbox"
-            label={label}
-            onChange={() => handleCheckboxChange(label)}
-          />
-        ))}
+
+    return (
+      <div className="question-checkox-container">
+        <ul>
+          <li>{listText}</li>
+        </ul>
+
+        <Col md={{ offset: 1 }}>
+          <div className={className}>
+            {checkboxLabels.map((label, index) => (
+              <Form.Check
+                key={index}
+                className="text-14"
+                type="checkbox"
+                label={label}
+                onChange={() => handleCheckboxChange(label)}
+              />
+            ))}
+          </div>
+        </Col>
       </div>
-    </Col>
-  </div>
-  );
+    );
   };
 
 export default QuestionCheckbox;
