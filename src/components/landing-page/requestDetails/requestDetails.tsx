@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './requestDetails.scss';
 
 const ReqestDetails: React.FC = () => {
@@ -8,7 +9,9 @@ const ReqestDetails: React.FC = () => {
             <p>
                 $1,000 Referral Bonus:  Know an athlete who meets our criteria?  Refer them and earn a cash bonus when they qualify!
             </p>
-            <button className='custom-btn'>Request Details</button>
+            <Link to='/contact-us'>
+                <button className='custom-btn'>Contact Us</button>
+            </Link>
         </div>
     );
   };

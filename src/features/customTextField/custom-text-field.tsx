@@ -8,6 +8,8 @@ interface CustomFormFieldProps {
     md?: number;
     xs?: number;
     className?: string;
+    onChange?: (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+    as?: React.ElementType;
   }
 
 const CustomFormField: React.FC<CustomFormFieldProps> = ({ 
@@ -16,7 +18,8 @@ const CustomFormField: React.FC<CustomFormFieldProps> = ({
   placeholder, 
   md = 6, 
   xs = 12,
-  className = 'control-label' 
+  onChange,
+  className = 'control-label'
 }) => (
   <Col md={md} xs={xs}>
     <Form.Group className="mb-4" controlId="">
@@ -26,6 +29,7 @@ const CustomFormField: React.FC<CustomFormFieldProps> = ({
         type="text"
         name={name}
         placeholder={placeholder}
+        onChange={onChange}
       />
     </Form.Group>
   </Col>
