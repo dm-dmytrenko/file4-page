@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import {Col, Form, Row, Container, Button} from "react-bootstrap";
+import emailjs from '@emailjs/browser';
 import CustomFormField from '../../../features/customTextField/custom-text-field';
 import GradientTextComponent from '../../../features/gradient-text/gradient-text';
 import QuestionCheckbox from '../../../features/questionCheckbox/question-checkbox';
@@ -14,6 +15,7 @@ const Questionnaire: React.FC = () => {
     const startScrollTop = 2228;
     const [scrollPercentage, setScrollPercentage] = useState(0);
 
+    const formRef = useRef<HTMLFormElement>(null);
     const [checkboxValues, setCheckboxValues] = useState<Record<string, string[]>>({});
     const [inputData, setInputData] = useState<Record<string, string>>({});
 
@@ -35,6 +37,8 @@ const Questionnaire: React.FC = () => {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         
+        if (!formRef.current) return;
+
         const formData: { [key: string]: string } = JSON.parse(JSON.stringify(checkboxValues));
 
         for (const key in inputData) {
@@ -58,6 +62,29 @@ const Questionnaire: React.FC = () => {
                 formData[radioButton.name] = radioButton.value;
             }
         }
+
+        const emailParams = {
+            from_name: 'V4P',
+            to_name: formData.personalName,
+            to_email: formData.personalEmail,
+            form_data: JSON.stringify(formData, null, 2),
+        };
+
+        emailjs.send(
+            'service_cw234kb',
+            'template_ku073ki',
+            emailParams,
+            '37C7bJkSAnfPW_MQJ'
+        )
+        .then(
+            (response) => {
+                console.log('SUCCESS!', response.status, response.text);
+            },
+            (error) => {
+                console.log('FAILED...', error);
+            }
+        );
+
         
         console.log(formData);
     };
@@ -86,7 +113,7 @@ const Questionnaire: React.FC = () => {
     }, []);
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form ref={formRef} onSubmit={handleSubmit}>
         <PersonalDetails onChange={handleCheckboxChange} />
         <Container className='question-container'>
             <Row 

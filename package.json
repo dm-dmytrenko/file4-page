@@ -4,6 +4,7 @@
   "homepage": "http://dm-dmytrenko.github.io/file4-page",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
     "@react-aria/ssr": "^3.9.3",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
